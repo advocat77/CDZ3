@@ -1,16 +1,14 @@
-﻿void ShowQuarter(int ax, int ay, int bx, int by, int az, int bz)
+﻿void Kub(int n)
 {
-   char[] array = input.ToCharArray();
-   Console.WriteLine($"Число: {distance}");
+   Console.WriteLine($"Числа в промежутке от 0 до {n}:, n");
+
+   for (int i = 0; i < n; i++)
+   {
+      Console.WriteLine(i * i * i + ",");
+   }
+   Console.Write(n * n * n);
 }
-int GetInput(string text)
-{
-   Console.WriteLine(text);
-   return (Convert.ToInt32(Console.ReadLine()));
-}
-int ax = GetInput("Введите координату ax: ");
-int ay = GetInput("Введите координату ay: ");
-int bx = GetInput("Введите координату bx: ");
-int by = GetInput("Введите координату by: ");
-int az = GetInput("Введите координату az: ");
-int bz = GetInput("Введите координату bz: ");
+Console.WriteLine("Введите число N:");
+int n = int.Parse(Console.ReadLine());
+n = Math.Abs(n);
+Kub(n);
